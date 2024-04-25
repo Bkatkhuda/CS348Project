@@ -1,0 +1,19 @@
+<!-- teacher_view_students.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Students</title>
+</head>
+<body>
+    <h2>View Students</h2>
+    <ul>
+        {% for x, y, z in students %}
+            <li><b>ID:</b> {{ x }},   <br>  <b>Username:</b> {{ y }},    <br>   <b>Name:</b> {{ z }}</li>
+            <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>

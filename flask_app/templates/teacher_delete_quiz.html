@@ -1,0 +1,22 @@
+<!-- teacher_delete_quiz.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Quiz</title>
+</head>
+<body>
+    <h2>Delete Quiz</h2>
+    <form action="/teacher_delete_quiz" method="post">
+        <label for="quiz">Select a quiz topic to delete:</label><br>
+        <select id="quiz" name="quiz">
+            {% for topic in topics %}
+                <option value="{{ topic }}">{{ topic }}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Delete Quiz">
+    </form>
+</body>
+</html>

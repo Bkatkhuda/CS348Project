@@ -1,0 +1,28 @@
+<!-- teacher_view_student_reports.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Student Reports</title>
+</head>
+<body>
+    <h2>View Student Reports</h2>
+    <form action="/generate_report" method="post">
+        <label for="student">Select a student:</label>
+        <select id="student" name="student">
+            {% for student in students %}
+                <option value="{{ student }}">{{student}}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="topic">Select a quiz:</label>
+        <select id="topic" name="topic">
+            {% for topic in topics %}
+                <option value="{{topic}}">{{topic}}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Generate Report">
+    </form>
+</body>
+</html>

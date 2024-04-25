@@ -1,0 +1,26 @@
+<!-- quiz_topic_report.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Topic Report</title>
+</head>
+<body>
+    <h2>Quiz Topic to Generate Report</h2>
+    <form action="/quiz_topic_report" method="post">
+        <label for="topic">Which topic would you like a report on?</label>
+        <select id="topic" name="topic">
+            {% for topic in topics %}
+                <option value="{{ topic }}">{{ topic }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="show_correct_answers">Would you like to see the correct answers for your mistakes?</label>
+        <input type="checkbox" id="show_correct_answers" name="show_correct_answers" value="yes">
+        <br>
+        <input type="submit" value="Generate Report">
+    </form>
+</body>
+</html>

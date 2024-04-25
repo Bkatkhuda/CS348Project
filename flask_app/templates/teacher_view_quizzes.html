@@ -1,0 +1,22 @@
+<!-- view_quiz.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view_quiz</title>
+</head>
+<body>
+    <h2>Select a Quiz Topic to view</h2>
+    <form action="/teacher_view_quizzes" method="post">
+        <label for="topic">Choose a topic:</label>
+        <select id="topic" name="topic">
+            {% for topic in topics %}
+                <option value="{{topic}}">{{topic}}</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="View Quiz">
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- start_quiz.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Quiz</title>
+</head>
+<body>
+    <h2>Quiz Questions</h2>
+    <form action="/submit_quiz" method="post">
+        <ol>
+            {% for question, choices in questions %}
+                <li>{{ question }}</li>
+                <ul>
+                    {% for choice in choices %}
+                        <li>
+                            <input type="radio" id="{{ loop.index }}" name="{{ question }}" value="{{ choice }}">
+                            <label for="{{ loop.index }}">{{ choice }}</label>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </ol>
+        <input type="submit" value="Submit Quiz">
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- teacher_view_quiz.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Quiz</title>
+</head>
+<body>
+    <h2>Quiz Questions for The topic: {{ topic }}</h2>
+    <form action="/teacher_view_quiz" method="post">
+        <ul>
+            {% for question, choices in questions %}
+                <li>
+                    <p>{{ question }}</p>
+                    <ul>
+                        {% for choice in choices %}
+                            <li>{{ choice }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </form>
+</body>
+</html>

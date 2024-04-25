@@ -1,0 +1,33 @@
+<!-- templates/teacher_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Welcome, {{ name }}!</h2>
+    <p>This is your BoilerPractice teacher dashboard.</p>
+    <p>What would you like to do?</p>
+    <ul>
+        <li><a href="/teacher_view_students">View Students</a></li>
+        <li><a href="/teacher_view_student_reports">View Student Reports</a></li>  
+        <li><a href="/teacher_view_quizzes">View Quizzes</a></li> 
+        <li><a href="/teacher_add_quiz">Add a New Quiz</a></li> 
+        <li><a href="/teacher_delete_quiz">Delete a  Quiz</a></li> 
+        <li><a href="/edit_user_page">Edit User</a></li>
+        <li><a href="/delete_user">Delete User</a></li>
+        <li><a href="/logout">Logout</a></li>
+
+        <!--<p>THE NEXT 5 OPTIONS WILL NOT BE IN THE FINAL VERSION</p>
+        <p>I will only use them to demonstrate updates in the database for the demo</p>
+        <li><a href="/view_questions">View questions table</a></li> 
+        <li><a href="/view_students">View students table</a></li> 
+        <li><a href="/view_student_choices">View student_choices table</a></li> 
+        <li><a href="/view_choices">View choices table</a></li> 
+        <li><a href="/view_teachers">View teachers table</a></li> -->
+    </ul>
+</body>
+</html>
