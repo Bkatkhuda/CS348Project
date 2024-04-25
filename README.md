@@ -1,1 +1,3 @@
 # CS348Project
+
+This is my BoilerPractice website for the CS 348 Project. The files included in this reposiroty are the flask_app folder, which includes the app.py file with all the code for the applications backend, as well as several html files that contain all the code for the apps frontend. Other than this folder, the database is included, which currently is empty since a user who uses the website will be able to add stuff to it as they wish. Finally two csv files are included as example files for the quizzes and the app.py has a section of code commented out that should be uncommented if the user would like to add these two quizzes contained among these csv files to the database for testing. 
